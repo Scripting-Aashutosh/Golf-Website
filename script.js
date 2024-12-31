@@ -4,29 +4,29 @@ let blur = document.querySelector("#cursor-blur");
 document.addEventListener("mousemove", function(dets){
     crs.style.left = dets.x+30 +"px"
     crs.style.top = dets.y+"px"
-    blur.style.left = dets.x- 200 +"px"
-    blur.style.top = dets.y- 200+"px"
+    blur.style.left = dets.x- 250 +"px"
+    blur.style.top = dets.y- 250+"px"
 })
 
 let h4All=  document.querySelectorAll("#nav h4")
 h4All.forEach(function(elem){
     elem.addEventListener("mouseenter", function(){
-        crs.style.scale = 3
-        crs.style.border = "1px solid #ffffff"
-        crs.style.backgroundColor = "transparent"
+        crs.style.scale = 3;
+        crs.style.border = "1px solid #ffffff";
+        crs.style.backgroundColor = "transparent";
     });
 
     elem.addEventListener("mouseleave", function(){
-        crs.style.scale = 1
-        crs.style.border = "0px solid #95C11E"
-        crs.style.backgroundColor = "#95C11E"
+        crs.style.scale = 1;
+        crs.style.border = "0px solid #95C11E";
+        crs.style.backgroundColor = "#95C11E";
     });
 })
 
 
 gsap.to("#nav", {
     backgroundColor: "#000",
-    height: "100px",
+    height: "110px",
     duration: 0.5,
     scrollTrigger:{
         trigger: "#nav",
@@ -34,7 +34,7 @@ gsap.to("#nav", {
         // markers: true,
         start: "top -10%",
         end: "top -11%",
-        scrub: 2
+        scrub: 1,
     }    
 })
 
@@ -44,9 +44,9 @@ gsap.to("#main", {
         trigger: "#main",
         scroller: "body",
         // markers: true,
-        start: "top -35%",
-        end: "top -85%",
-        scrub: 2
+        start: "top -25%",
+        end: "top -70%",
+        scrub: 2,
     }
 })
 
@@ -60,9 +60,10 @@ gsap.from("#about-us img,#about-us-in", {
       // markers:true,
       start: "top 70%",
       end: "top 65%",
-      scrub: 2
+      scrub: 2,
     },
 });  
+
 
 
 gsap.from("#page5 h1", {
